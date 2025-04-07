@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="fr" data-theme="aaron">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu avec Tailwind - Mon CV</title>
+  <link rel="stylesheet" href="css/output.css">
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <!-- Menu -->
+  <nav class="bg-blue-500 p-4">
+    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+      <div class="relative flex items-center justify-between h-16">
+        <!-- Logo -->
+        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-gray-400 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-500 focus:ring-white" aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+            <span class="sr-only">Ouvrir le menu mobile</span>
+            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Logo ou Titre -->
+        <div class="flex-shrink-0 text-white text-2xl">J'aime les maths.fr</div>
+
+        <!-- Menu Desktop -->
+        <div class="hidden sm:block sm:ml-6">
+          <div class="flex space-x-4">
+            <a href="index.html" class="text-white hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium">Accueil</a>
+            <a href="calculatrice.html" class="text-white hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium">Calculatrice</a>
+            <a href="quizz.html" class="text-white hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium">Quizz</a>
+            <a href="cours.html" class="text-white hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium">Cours</a>
+            <a href="contact.html" class="text-white hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menu mobile -->
+    <div class="sm:hidden" id="mobile-menu" style="display: none;">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <a href="index.html" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Accueil</a>
+        <a href="calculatrice.html" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Calculatrice</a>
+        <a href="quizz.html" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Quizz</a>
+        <a href="contact.html" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- message entre personnes-->
+  <div class="chat chat-start">
+    <div class="chat-image avatar">
+      <div class="w-10 rounded-full">
+        <img
+          alt="Math Site Avatar"
+          src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+      </div>
+    </div>
+    <div class="chat-header">
+      J'aime les Maths
+      <time class="text-xs opacity-50">10:00</time>
+    </div>
+    <div class="chat-bubble">Bienvenue sur J'aime les Maths, votre site de référence pour tout apprendre sur les mathématiques !</div>
+    <div class="chat-footer opacity-50">Envoyé</div>
+  </div>
+  <div class="chat chat-end">
+    <div class="chat-image avatar">
+      <div class="w-10 rounded-full">
+        <img
+          alt="User Avatar"
+          src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+      </div>
+    </div>
+    <div class="chat-header">
+      Étudiant
+      <time class="text-xs opacity-50">10:01</time>
+    </div>
+    <div class="chat-bubble">J'ai besoin d'aide pour résoudre mes exercices. Peux-tu m'aider ?</div>
+    <div class="chat-footer opacity-50">Vu à 10:01</div>
+  </div>
+  <div class="chat chat-start">
+    <div class="chat-image avatar">
+      <div class="w-10 rounded-full">
+        <img
+          alt="Math Site Avatar"
+          src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+      </div>
+    </div>
+    <div class="chat-header">
+      J'aime les Maths
+      <time class="text-xs opacity-50">10:02</time>
+    </div>
+    <div class="chat-bubble">Sur J'aime les Maths, vous pouvez trouver des exercices interactifs et des tutoriels pour maîtriser le programme scolaire    bien plus encore !</div>
+    <div class="chat-footer opacity-50">Envoyé</div>
+  </div>
+  <div class="chat chat-end">
+    <div class="chat-image avatar">
+      <div class="w-10 rounded-full">
+        <img
+          alt="User Avatar"
+          src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+      </div>
+    </div>
+    <div class="chat-header">
+      Étudiant
+      <time class="text-xs opacity-50">10:03</time>
+    </div>
+    <div class="chat-bubble">Super, merci ! Je vais explorer le site tout de suite.</div>
+    <div class="chat-footer opacity-50">Vu à 10:03</div>
+  </div>
+  
+
+  <!-- Section Accueil avec CV -->
+  <section id="accueil" class="py-16 px-4 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold text-center text-gray-800 mb-8">Cour particulier</h2>
+
+      <!-- Infos personnelles -->
+      <div class="text-center mb-12">
+        <div class="text-2xl font-semibold text-blue-600">Aaron S</div>
+        <div class="text-lg text-gray-600">Cour de mathematiques</div>
+        <div class="mt-4 text-gray-500">Email : Aaron@gmail.com | Téléphone : +33 1 23 45 67 89</div>
+      </div>
+
+      <!-- Expérience professionnelle -->
+      <div class="mb-8">
+        <h3 class="text-2xl font-semibold text-blue-600 mb-4">Expérience Professionnelle</h3>
+        <ul class="list-disc pl-6 space-y-4">
+          <li>
+            <strong>Professionnelle</strong> (Jan 2020 - Présent)
+            <ul class="list-inside mt-2">
+              <li>Conception et développement de cour.</li>
+              <li>Gestion des bases de données SQL et NoSQL.</li>
+              <li>Amélioration de la performance des sites web existants.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Développeur Front-End - XYZ Studio</strong> (Sept 2018 - Déc 2019)
+            <ul class="list-inside mt-2">
+              <li>Développement d’interfaces utilisateur pour des sites web interactifs.</li>
+              <li>Collaboration avec les équipes de design pour l'intégration UI/UX.</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Compétences -->
+      <div class="mb-8">
+        <h3 class="text-2xl font-semibold text-blue-600 mb-4">Compétences Auxiliaires</h3>
+        <ul class="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <li class="bg-blue-50 px-4 py-2 rounded-md text-gray-700 text-center">HTML</li>
+          <li class="bg-blue-50 px-4 py-2 rounded-md text-gray-700 text-center">CSS</li>
+          <li class="bg-blue-50 px-4 py-2 rounded-md text-gray-700 text-center">JavaScript</li>
+          <li class="bg-blue-50 px-4 py-2 rounded-md text-gray-700 text-center">Linux</li>
+          <li class="bg-blue-50 px-4 py-2 rounded-md text-gray-700 text-center">Node.js</li>
+          <li class="bg-blue-50 px-4 py-2 rounded-md text-gray-700 text-center">python</li>
+        </ul>
+      </div>
+
+      <!-- Formation -->
+      <div>
+        <h3 class="text-2xl font-semibold text-blue-600 mb-4">Formation</h3>
+        <ul class="list-disc pl-6">
+          <li><strong>Master en Informatique - EPITA</strong> (2020-2025)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Script pour afficher/masquer le menu mobile -->
+  <script>
+    const mobileMenuButton = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    mobileMenuButton.addEventListener("click", () => {
+      if (mobileMenu.style.display === "none" || mobileMenu.style.display === "") {
+        mobileMenu.style.display = "block";
+      } else {
+        mobileMenu.style.display = "none";
+      }
+    });
+  </script>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white text-center py-4 mt-8">
+      <p class="text-lg">Cours de Mathématiques- Créé par Aaron &copy;</p>
+  </footer>
+</body>
+</html>

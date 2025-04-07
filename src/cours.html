@@ -1,0 +1,177 @@
+
+<!doctype html>
+<html lang="fr">
+<head>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Menu avec Tailwind - Mon CV</title>
+        <link rel="stylesheet" href="css/output.css">
+      </head>
+      <body class="bg-gray-100 font-sans">
+      
+        <!-- Menu -->
+        <nav class="bg-blue-500 p-4">
+          <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+            <div class="relative flex items-center justify-between h-16">
+              <!-- Logo -->
+              <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-gray-400 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-500 focus:ring-white" aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+                  <span class="sr-only">Ouvrir le menu mobile</span>
+                  <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                  </svg>
+                </button>
+              </div>
+      
+              <!-- Logo ou Titre -->
+              <div class="flex-shrink-0 text-white text-2xl">J'aime les maths.fr</div>
+      
+              <!-- Menu Desktop -->
+              <div class="hidden sm:block sm:ml-6">
+                <div class="flex space-x-4">
+                  <a href="index.html" class="text-white hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium">Accueil</a>
+                  <a href="calculatrice.html" class="text-white hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium">Calculatrice</a>
+                  <a href="quizz.html" class="text-white hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium">Quizz</a>
+                  <a href="cours.html" class="text-white hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium">Cours</a>
+                  <a href="contact.html" class="text-white hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Menu mobile -->
+          <div class="sm:hidden" id="mobile-menu" style="display: none;">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+              <a href="index.html" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Accueil</a>
+              <a href="calculatrice.html" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Calculatrice</a>
+              <a href="quizz.html" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Quizz</a>
+              <a href="cours.html" class="text-white hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium">Cours</a>
+              <a href="contact.html" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            </div>
+          </div>
+        </nav>
+      
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<title>Calculatrice</title>
+<link rel="stylesheet" href="css/output.css">
+</head>
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cours de Mathématiques : Le Théorème de Pythagore</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- En-tête -->
+    <header class="bg-green-600 text-white py-6 text-center">
+        <h1 class="text-4xl font-bold">Le Théorème de Pythagore</h1>
+        <p class="text-lg mt-2">Un cours de mathématiques pour comprendre le théorème de Pythagore</p>
+    </header>
+
+    <!-- Contenu principal -->
+    <main class="px-6 py-8">
+
+        <!-- Introduction -->
+        <section class="bg-white rounded-lg shadow-md p-6 mb-6">
+            <h2 class="text-3xl font-semibold text-green-700">Introduction</h2>
+            <p class="mt-4 text-lg">
+                Le théorème de Pythagore est un principe fondamental en géométrie qui s'applique aux triangles
+                rectangles. Il nous permet de relier les longueurs des côtés d'un triangle rectangle. Selon ce théorème :
+            </p>
+            <p class="mt-2 text-xl font-bold text-center">a² + b² = c²</p>
+            <p class="mt-4">
+                Où :
+                <ul class="list-disc pl-6 mt-2">
+                    <li><strong>a</strong> et <strong>b</strong> sont les longueurs des deux cathètes du triangle rectangle.</li>
+                    <li><strong>c</strong> est la longueur de l'hypoténuse, le côté le plus long du triangle.</li>
+                </ul>
+            </p>
+        </section>
+
+        <!-- Exemple -->
+        <section class="bg-white rounded-lg shadow-md p-6 mb-6">
+            <h2 class="text-3xl font-semibold text-green-700">Exemple Pratique</h2>
+            <div class="example mt-4 p-4 bg-green-100 border-l-4 border-green-600">
+                <p class="text-lg">
+                    Imaginons un triangle rectangle avec des côtés de 3 cm et 4 cm. Nous voulons calculer la longueur
+                    de l'hypoténuse (c).
+                </p>
+                <p class="mt-2 text-lg">
+                    Selon le théorème de Pythagore :
+                    <br> 3² + 4² = c²
+                    <br> 9 + 16 = c²
+                    <br> 25 = c²
+                    <br> c = √25 = 5 cm
+                </p>
+            </div>
+        </section>
+
+        <!-- Illustration -->
+        <section class="bg-white rounded-lg shadow-md p-6 mb-6">
+            <h2 class="text-3xl font-semibold text-green-700">Illustration du Théorème</h2>
+            <p class="mt-4 text-lg">
+                Voici une illustration qui montre comment le théorème de Pythagore fonctionne :
+            </p>
+            <div class="flex justify-center mt-6">
+                <img src="https://via.placeholder.com/500x300?text=Triangle+Rectangle" alt="Illustration du théorème de Pythagore" class="rounded-lg shadow-lg">
+            </div>
+        </section>
+
+        <!-- Exercices -->
+        <section class="bg-white rounded-lg shadow-md p-6 mb-6">
+            <h2 class="text-3xl font-semibold text-green-700">Exercices</h2>
+            <p class="mt-4 text-lg">
+                Essayez de résoudre les exercices suivants pour tester votre compréhension du théorème de Pythagore.
+            </p>
+            <div class="exercise mt-6 p-4 bg-blue-100 border-l-4 border-blue-600">
+                <p class="text-lg">
+                    1. Dans un triangle rectangle, les longueurs des cathètes sont 5 cm et 12 cm. Quelle est la
+                    longueur de l'hypoténuse ?
+                </p>
+                <p class="mt-2 font-semibold text-lg">
+                    <span class="text-blue-600">Réponse :</span> <span class="text-gray-700">Utilisez la formule a² + b² = c² pour résoudre.</span>
+                </p>
+            </div>
+            <div class="exercise mt-6 p-4 bg-blue-100 border-l-4 border-blue-600">
+                <p class="text-lg">
+                    2. Dans un triangle rectangle, l'hypoténuse mesure 13 cm et une cathète mesure 5 cm. Quelle est
+                    la longueur de l'autre cathète ?
+                </p>
+                <p class="mt-2 font-semibold text-lg">
+                    <span class="text-blue-600">Réponse :</span> <span class="text-gray-700">Utilisez la formule a² + b² = c² pour trouver la valeur de l'autre cathète.</span>
+                </p>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="bg-white rounded-lg shadow-md p-6 mb-6">
+            <h2 class="text-3xl font-semibold text-green-700">Conclusion</h2>
+            <p class="mt-4 text-lg">
+                Le théorème de Pythagore est un outil puissant pour résoudre des problèmes de géométrie dans les
+                triangles rectangles. En maîtrisant cette formule, vous serez en mesure de calculer la longueur de
+                n'importe quel côté d'un triangle rectangle si vous connaissez les autres.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white text-center py-4 mt-8">
+        <p class="text-lg">Cours de Mathématiques sur le Théorème de Pythagore - Créé par Aaron &copy;</p>
+    </footer>
+
+</body>
+
+</html>
+
+</html>
