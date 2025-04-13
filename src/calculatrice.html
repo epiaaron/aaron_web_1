@@ -33,7 +33,6 @@
                   <a href="calculatrice.html" class="text-white hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium">Calculatrice</a>
                   <a href="quizz.html" class="text-white hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium">Quizz</a>
                   <a href="cours.html" class="text-white hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium">Cours</a>
-                  <a href="contact.html" class="text-white hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
                 </div>
               </div>
             </div>
@@ -45,7 +44,6 @@
               <a href="index.html" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Accueil</a>
               <a href="calculatrice.html" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Calculatrice</a>
               <a href="quizz.html" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Quizz</a>
-              <a href="contact.html" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
             </div>
           </div>
         </nav>
@@ -85,36 +83,13 @@
         </div>
     </div>
 
-    <script>
-        const buttons = document.querySelectorAll("button");
-        const result = document.getElementById('resultat');
 
-        function buttonClicked(e) {
-            let buttonId = e.target.id;
-            const valeur1 = document.getElementById('valeur1').value;
-            const valeur2 = document.getElementById('valeur2').value;
+    <script src="js/calculatrice.js"></script>
 
-            if (valeur1 === '' || valeur2 === '') {
-                result.innerHTML = 'Veuillez entrer des nombres dans les deux champs.';
-                return;
-            }
-
-            const num1 = parseFloat(valeur1);
-            const num2 = parseFloat(valeur2);
-
-            if (buttonId === "+") {
-                result.innerHTML = num1 + num2;
-            } else if (buttonId === "-") {
-                result.innerHTML = num1 - num2;
-            } else if (buttonId === "*") {
-                result.innerHTML = num1 * num2;
-            }
-        }
-
-        buttons.forEach((button) => {
-            button.addEventListener("click", buttonClicked);
-        });
-    </script>
-
+  
+<!-- Footer -->
+<footer class="bg-gray-900 text-white text-center py-4 mt-8">
+  <p class="text-lg">Cours de Mathématiques - Créé par Aaron &copy;</p>
+</footer>
 </body>
 </html>
