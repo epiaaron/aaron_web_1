@@ -33,7 +33,6 @@
                   <a href="calculatrice.html" class="text-white hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium">Calculatrice</a>
                   <a href="quizz.html" class="text-white hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium">Quizz</a>
                   <a href="cours.html" class="text-white hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium">Cours</a>
-                  <a href="contact.html" class="text-white hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium">Contact</a>
                 </div>
               </div>
             </div>
@@ -45,7 +44,6 @@
               <a href="index.html" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Accueil</a>
               <a href="calculatrice.html" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Calculatrice</a>
               <a href="quizz.html" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Quizz</a>
-              <a href="contact.html" class="text-white hover:bg-blue-700 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
             </div>
           </div>
         </nav>
@@ -56,210 +54,31 @@
   <link rel="stylesheet" href="css/output.css">
 </head>
     
-<body class="bg-gray-100 font-sans">
+   <!-- Main Quiz Container -->
+   <div class="min-h-screen flex flex-col justify-center items-center p-4">
 
-  <!-- Conteneur principal du quizz -->
-  <div class="min-h-screen flex flex-col justify-center items-center p-4">
+    <!-- Quiz Title -->
+    <h1 class="text-4xl font-bold text-center text-blue-600 mb-8">Mathematics Quiz</h1>
 
-      <!-- Titre du quizz -->
-      <h1 class="text-4xl font-bold text-center text-blue-600 mb-8">Quizz Mathématiques</h1>
+    <!-- Progress Bar -->
+    <div class="w-full max-w-2xl mb-4">
+        <div class="h-2 bg-gray-300 rounded-full">
+            <div id="progress-bar" class="h-2 bg-blue-600 rounded-full" style="width: 0%;"></div>
+        </div>
+    </div>
 
-      <!-- Barre de progression -->
-      <div class="w-full bg-gray-200 rounded-full h-4 mb-8">
-          <div id="progress-bar" class="bg-blue-500 h-4 rounded-full" style="width: 0%;"></div>
-      </div>
+    <!-- Quiz Container -->
+    <div id="quiz" class="w-full max-w-2xl bg-white p-8 rounded-lg shadow-lg space-y-6">
+        <!-- Questions and answers will appear here -->
+    </div>
 
-      <!-- Conteneur du Quizz -->
-      <div id="quizz" class="w-full max-w-2xl bg-white p-8 rounded-lg shadow-lg space-y-6">
-          <!-- La question et les réponses vont apparaître ici -->
-      </div>
+    <!-- Display Score at the End -->
+    <div id="score" class="hidden text-2xl font-semibold text-center text-gray-800 mt-6"></div>
+</div>
 
-      <!-- Affichage du score à la fin -->
-      <div id="score" class="hidden text-2xl font-semibold text-center text-gray-800 mt-6"></div>
-  </div>
 
-  <script>
-      const questions = [
-          {
-              question: "Quel est le résultat de 5 + 3 ?",
-              reponses: [
-                  { valeur: "8", status: true },
-                  { valeur: "6", status: false },
-                  { valeur: "9", status: false },
-                  { valeur: "7", status: false }
-              ]
-          },
-          {
-              question: "Quel est le produit de 7 × 6 ?",
-              reponses: [
-                  { valeur: "42", status: true },
-                  { valeur: "36", status: false },
-                  { valeur: "48", status: false },
-                  { valeur: "56", status: false }
-              ]
-          },
-          {
-              question: "Quel est le résultat de 12 ÷ 4 ?",
-              reponses: [
-                  { valeur: "3", status: true },
-                  { valeur: "4", status: false },
-                  { valeur: "2", status: false },
-                  { valeur: "5", status: false }
-              ]
-          },
-          {
-              question: "Combien de côtés a un triangle équilatéral ?",
-              reponses: [
-                  { valeur: "3", status: true },
-                  { valeur: "4", status: false },
-                  { valeur: "2", status: false },
-                  { valeur: "5", status: false }
-              ]
-          },
-          {
-              question: "Quel est le carré de 9 ?",
-              reponses: [
-                  { valeur: "81", status: true },
-                  { valeur: "18", status: false },
-                  { valeur: "72", status: false },
-                  { valeur: "45", status: false }
-              ]
-          },
-          {
-              question: "Quel est le résultat de 15 ÷ 3 ?",
-              reponses: [
-                  { valeur: "5", status: true },
-                  { valeur: "4", status: false },
-                  { valeur: "6", status: false },
-                  { valeur: "7", status: false }
-              ]
-          },
-          {
-              question: "Quel est le produit de 8 × 9 ?",
-              reponses: [
-                  { valeur: "72", status: true },
-                  { valeur: "81", status: false },
-                  { valeur: "56", status: false },
-                  { valeur: "63", status: false }
-              ]
-          },
-          {
-              question: "Combien de degrés y a-t-il dans un cercle ?",
-              reponses: [
-                  { valeur: "360", status: true },
-                  { valeur: "180", status: false },
-                  { valeur: "90", status: false },
-                  { valeur: "270", status: false }
-              ]
-          },
-          {
-              question: "Quel est le résultat de 11 × 12 ?",
-              reponses: [
-                  { valeur: "132", status: true },
-                  { valeur: "144", status: false },
-                  { valeur: "121", status: false },
-                  { valeur: "110", status: false }
-              ]
-          },
-          {
-              question: "Quel est le résultat de 20 - 15 ?",
-              reponses: [
-                  { valeur: "5", status: true },
-                  { valeur: "6", status: false },
-                  { valeur: "4", status: false },
-                  { valeur: "7", status: false }
-              ]
-          }
-      ];
-
-      let currentQuestionIndex = 0;
-      let score = 0;
-
-      const quizz = document.getElementById('quizz');
-      const progressBar = document.getElementById('progress-bar');
-      const scoreElement = document.getElementById('score');
-
-      function loadQuestion() {
-          const question = questions[currentQuestionIndex];
-          quizz.innerHTML = ''; // Clear previous question
-
-          // Ajouter la question
-          const questionElement = document.createElement('h2');
-          questionElement.classList.add('text-2xl', 'font-semibold', 'text-gray-800', 'mb-4');
-          questionElement.textContent = question.question;
-          quizz.appendChild(questionElement);
-
-          // Ajouter les réponses
-          question.reponses.forEach((rep) => {
-              const answerButton = document.createElement('button');
-              answerButton.classList.add(
-                  'w-full',
-                  'py-3',
-                  'mb-2',
-                  'text-lg',
-                  'font-medium',
-                  'text-white',
-                  'rounded-md',
-                  'focus:outline-none',
-                  'focus:ring-2',
-                  'focus:ring-blue-500',
-                  'hover:bg-blue-700',
-                  'transition-colors'
-              );
-
-              // Initial couleur gris
-              answerButton.classList.add('bg-gray-500');
-              answerButton.textContent = rep.valeur;
-
-              answerButton.addEventListener('click', () => {
-                  // Vérifier la réponse et changer la couleur
-                  if (rep.status) {
-                      answerButton.classList.remove('bg-gray-500');
-                      answerButton.classList.add('bg-green-500');
-                      score++;
-                  } else {
-                      answerButton.classList.remove('bg-gray-500');
-                      answerButton.classList.add('bg-red-500');
-                  }
-
-                  // Désactiver tous les boutons
-                  const allButtons = quizz.querySelectorAll('button');
-                  allButtons.forEach((button) => button.disabled = true);
-
-                  // Passer à la question suivante après un délai
-                  setTimeout(() => {
-                      currentQuestionIndex++;
-
-                      // Si toutes les questions sont répondues, afficher la note
-                      if (currentQuestionIndex < questions.length) {
-                          loadQuestion();
-                          updateProgressBar();
-                      } else {
-                          showScore();
-                      }
-                  }, 1000);
-              });
-
-              quizz.appendChild(answerButton);
-          });
-      }
-
-      function updateProgressBar() {
-          const progress = (currentQuestionIndex / questions.length) * 100;
-          progressBar.style.width = `${progress}%`;
-      }
-
-      function showScore() {
-          quizz.innerHTML = ''; // Clear questions and answers
-          scoreElement.textContent = `Votre score est de ${score} sur ${questions.length}!`;
-          scoreElement.classList.remove('hidden');
-      }
-
-      // Lancer le quizz
-      loadQuestion();
-      updateProgressBar();
-
-  </script>
+<script src="js/quizz.js"></script>
 
 </body>
 </html>
+
